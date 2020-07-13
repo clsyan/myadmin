@@ -1,0 +1,194 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+nav ul{
+    list-style: none;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s linear;
+}
+nav input{
+    border: none;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    width: 55px;
+    background-color: rgb(236, 236, 236); 
+}
+nav ul li{
+    margin-top: 30px;
+}
+nav ul li span{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+nav ul li svg{
+    color: rgb(121, 121, 121);
+    height: 48px !important;
+    width: 36px !important;
+}
+nav ul li:hover, nav ul li:hover > svg{
+    color: black;
+    cursor: pointer;
+}
+
+header{
+    height: 78px !important;
+}
+
+.card{
+    border-radius: 0%;
+    margin-top: 25px !important;
+}
+
+#number-cards{
+    height: 100px;
+}
+#number-cards h6{
+    font-weight: 500;
+    font-size: 16px;
+}
+#number-cards p{
+    font-weight: 300;
+    font-size: 10px;
+}
+#toggler-icon{
+    cursor: pointer;
+    padding: 0px 8px; 
+    height: 83px;
+}
+
+h6{
+    font-size: 20px;
+}
+#landscape-icon{
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 70px;
+    cursor: pointer;
+}
+#user-utils #text-wrapper h6{
+    text-align: right;
+    font-weight: 500;
+}
+#user-utils #text-wrapper span{
+    text-align: right;
+    font-weight: 300;
+    font-size: .9em;
+    text-decoration: none;
+    cursor: pointer;
+}
+#page{
+    display: flex;
+    width: 100% !important;
+}
+
+.toggled{
+    width: 250px;
+    height: 100%;
+    z-index: 1;
+    background-color: rgb(236, 236, 236);
+    box-shadow: 10px 5px 15px rgb(136, 136, 136);
+
+}
+.toggled li{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.toggled li span{
+    font-size: 16px;
+    opacity: 1;
+    display: block;
+}
+#main-content{
+    width: 100%;
+}
+.btn-primary{
+    width: 88px !important;
+}
+
+#cog-icon{
+    align-self: center;
+    color: rgb(75, 75, 75);
+    background-color: #ccc;
+    width: 50px;
+    height: 34px;
+    padding: 7px;
+    cursor: pointer;
+}
+
+#sales_div{
+    height: 320px;
+}
+#categories_div{
+    width: 100%; 
+    height: 325px ;
+}
+
+
+/* DARKMODE */
+.darkmode--activated 
+#user-utils
+{
+    color: rgb(211, 211, 211);
+}
+.darkmode--activated
+#chart-card,
+.darkmode--activated
+#chart-card text{
+    background-color: #9c9c9c;
+}
+.darkmode--activated
+#number-cards{
+    background-color: #414141;
+    color: rgb(249, 249, 249);
+
+}
+.darkmode--activated header, 
+.darkmode--activated
+nav{
+    background-color: #dbdbdb;
+    color: rgb(0, 0, 0);
+}
+.darkmode--activated 
+main{
+    background-color: rgb(226, 225, 225);
+}
+/* FIM DARKMODE */
+
+footer{
+    font-size: .7rem;
+}
+#user-icon{
+    width:40px;
+    height:40px
+}
+#user-icon:hover{
+    background-color: rgb(236, 236, 236); 
+    cursor: pointer;
+}
+
+
+button{
+    width: 6em;
+    border-radius: 3px;
+    border: none;
+    height: 2.2em;
+    margin-right: 15px;
+    isolation: isolate;
+}
+@media screen and (max-width:430px){
+    td{
+        font-size: .5rem;
+    }
+    header{
+        height: 85px !important;
+    }
+}

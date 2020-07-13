@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="./assets/account-tie.svg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.6/lib/darkmode-js.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Admin</title>
+</head>
+<body>
+    <div id="page">
+        <nav>
+            <svg id="toggler-icon" class="darkmode-ignore text-white bg-primary" viewBox="0 0 24 24">
+                <path class="bg-primary" fill="currentColor" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" />
+            </svg>
+            <ul id="sidebar-items" class="m-0 p-0">
+                <li>
+                    <svg viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                    </svg>
+                    <span style="width: 70%;"><input style="width: 100%;" type="text"></span>
+                </li>
+                <li >
+                    <svg  viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z" />
+                    </svg>
+                    <span>HOME</span>
+                </li>
+                <li>
+                    <svg  viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M7,20H9V14H7V20M11,20H13V12H11V20M15,20H17V16H15V20Z" />
+                    </svg>
+                    <span>HISTORY</span>
+                </li>
+                <li>
+                    <svg  viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M17.45,15.18L22,7.31V19L22,21H2V3H4V15.54L9.5,6L16,9.78L20.24,2.45L21.97,3.45L16.74,12.5L10.23,8.75L4.31,19H6.57L10.96,11.44L17.45,15.18Z" />
+                    </svg>
+                    <span>SHEETS</span>
+                </li>
+                <li>
+                    <svg  viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M14,14H10V11H8L12,7L16,11H14V14M16,11M5,15V5H19V15H15A3,3 0 0,1 12,18A3,3 0 0,1 9,15H5M19,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3" />
+                    </svg>
+                    <span>ACCESS DATABASE</span>
+                </li>
+                <li>
+                    <svg  viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M13,9H18.5L13,3.5V9M6,2H14L20,8V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V4C4,2.89 4.89,2 6,2M6,20H15L18,20V12L14,16L12,14L6,20M8,9A2,2 0 0,0 6,11A2,2 0 0,0 8,13A2,2 0 0,0 10,11A2,2 0 0,0 8,9Z" />
+                    </svg>
+                    <span>GALLERY</span>
+                </li>
+                <li>
+                    <svg  viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1" />
+                    </svg>
+                    <span>AGENDA</span>
+                </li>
+                <li>
+                    <svg  viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M16 9C22 9 22 13 22 13V15H16V13C16 13 16 11.31 14.85 9.8C14.68 9.57 14.47 9.35 14.25 9.14C14.77 9.06 15.34 9 16 9M2 13C2 13 2 9 8 9S14 13 14 13V15H2V13M9 17V19H15V17L18 20L15 23V21H9V23L6 20L9 17M8 1C6.34 1 5 2.34 5 4S6.34 7 8 7 11 5.66 11 4 9.66 1 8 1M16 1C14.34 1 13 2.34 13 4S14.34 7 16 7 19 5.66 19 4 17.66 1 16 1Z" />
+                    </svg>
+                    <span>SWITCH ACCOUNT</span>
+                </li>
+                <li>
+                    <svg  viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                    </svg>
+                    <span>SETTINGS</span>
+                </li>
+            </ul>
+        </nav>
+        <div id="main-content">
+            <header class="d-flex align-items-center justify-content-between m-0 border-bottom row">
+                
+                <svg onclick="dark()" class="col-1 text-primary" id="landscape-icon" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+                </svg>
+                
+                <div class="d-flex justify-content-end pr-4 m-0 col-11" id="user-utils">
+                    <div class="d-flex align-items-center" id="wrapper">
+                        <div class="mr-3" id="text-wrapper">
+                            <h6 class="m-0">
+                                RENEE MCKELVEY
+                            </h6>
+                            <span>
+                                <p id="accountSettings" class="m-0">
+                                    Account Settings
+                                </p>
+                            </span>
+                        </div>
+                        <svg id="user-icon" class="p-2 rounded-circle border border-dark" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
+                        </svg>
+                    </div>
+                </div>
+            </header>
+            <main class="px-4">
+                <div class="p-2 row">
+                    <div class="m-0 p-2 px-3 col-md-4" id="card-wrapper">
+                        <div id="number-cards" class="p-2 flex-row justify-content-between align-items-center card">
+                            <div class="px-3" id="wrapper">
+                                <h6 class="m-0">TOTAL SALES</h6>
+                                <p class="m-0">21 324</p>
+                            </div>
+                            <div class="pb-2 px-3 ml-1" id="wrapper">
+                                <svg style="color:#f5866a; width:30px;height:30px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M5.06 3C4.63 3 4.22 3.14 3.84 3.42C3.46 3.7 3.24 4.06 3.14 4.5L2.11 8.91C1.86 10 2.06 10.92 2.69 11.73C2.81 11.85 2.93 11.97 3.04 12.07C3.63 12.64 4.28 13 5.22 13C6.16 13 6.91 12.59 7.47 12.05C8.1 12.67 8.86 13 9.8 13C10.64 13 11.44 12.63 12 12.07C12.68 12.7 13.45 13 14.3 13C15.17 13 15.91 12.67 16.54 12.05C17.11 12.62 17.86 13 18.81 13C19.76 13 20.43 12.65 21 12.06C21.09 11.97 21.18 11.87 21.28 11.77C21.94 10.95 22.14 10 21.89 8.91L20.86 4.5C20.73 4.06 20.5 3.7 20.13 3.42C19.77 3.14 19.38 3 18.94 3M18.89 4.97L19.97 9.38C20.06 9.81 19.97 10.2 19.69 10.55C19.44 10.86 19.13 11 18.75 11C18.44 11 18.17 10.9 17.95 10.66C17.73 10.43 17.61 10.16 17.58 9.84L16.97 5M5.06 5H7.03L6.42 9.84C6.3 10.63 5.91 11 5.25 11C4.84 11 4.53 10.86 4.31 10.55C4.03 10.2 3.94 9.81 4.03 9.38M9.05 5H11V9.7C11 10.05 10.89 10.35 10.64 10.62C10.39 10.88 10.08 11 9.7 11C9.36 11 9.07 10.88 8.84 10.59C8.61 10.3 8.5 10 8.5 9.66V9.5M13 5H14.95L15.5 9.5C15.58 9.92 15.5 10.27 15.21 10.57C14.95 10.87 14.61 11 14.2 11C13.89 11 13.61 10.88 13.36 10.62C13.11 10.35 13 10.05 13 9.7M3 14.03V19C3 20.11 3.89 21 5 21C9.67 21 14.33 21 19 21C20.1 21 21 20.11 21 19V14.05C20.45 14.63 19.75 14.96 19 15C18 15.03 17.25 14.74 16.54 14.05C15.94 14.65 15.14 15 14.3 15C13.4 15 12.6 14.64 12 14.07C11.43 14.64 10.65 15 9.78 15C8.87 15 8.07 14.65 7.47 14.05C6.89 14.64 6.1 15 5.23 15C4.33 15 3.66 14.65 3 14.03Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-0 p-2 px-3 col-md-4" id="card-wrapper">
+                        <div id="number-cards" class="p-2 flex-row justify-content-between align-items-center card">
+                            <div class="px-3" id="wrapper">
+                                <h6 class="m-0">TOTAL INCOME</h6>
+                                <p class="m-0">$ 211 324</p>
+                            </div>
+                            <div class="pb-2 px-3 ml-1" id="wrapper">
+                                <svg style="color:#8ab186; width:30px;height:30px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M5.5,7A1.5,1.5 0 0,1 4,5.5A1.5,1.5 0 0,1 5.5,4A1.5,1.5 0 0,1 7,5.5A1.5,1.5 0 0,1 5.5,7M21.41,11.58L12.41,2.58C12.05,2.22 11.55,2 11,2H4C2.89,2 2,2.89 2,4V11C2,11.55 2.22,12.05 2.59,12.41L11.58,21.41C11.95,21.77 12.45,22 13,22C13.55,22 14.05,21.77 14.41,21.41L21.41,14.41C21.78,14.05 22,13.55 22,13C22,12.44 21.77,11.94 21.41,11.58Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="m-0 p-2 px-3 col-md-4" id="card-wrapper">
+                        <div id="number-cards" class="p-2 flex-row justify-content-between align-items-center card">
+                            <div class="px-3" id="wrapper">
+                                <h6 class="m-0">TOTAL VIEWS</h6>
+                                <p class="m-0">652 234</p>
+                            </div>
+                            <div class="pb-2 px-3 ml-1" id="wrapper">
+                                <svg style="color:#6c757d; width:30px;height:30px" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M21,17H3V5H21M21,3H3A2,2 0 0,0 1,5V17A2,2 0 0,0 3,19H8V21H16V19H21A2,2 0 0,0 23,17V5A2,2 0 0,0 21,3Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="p-2 row">
+                    <div  class="p-2 px-3 col-md-8" id="card-wrapper">
+                        <div id="chart-card" class="card">
+                            <div class="d-flex justify-content-between p-2 border-bottom card-title">
+                                <h6 id="chart-heading" class="card-title">SALES PERFORMANCE</h6>
+                                <svg id="cog-icon" viewBox="0 0 24 24">
+                                    <path fill="currentColor" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                                </svg>
+                            </div>
+                            <div id="charts-wrapper">
+                                <div id="sales_div" ></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-2 px-3 col-md-4" id="card-wrapper">
+                        <div id="chart-card" class="card">
+                            <div class="d-flex align-items-center justify-content-between p-2 card-title">
+                                <h6 id="chart-heading" class="">TOP CATEGORIES</h6>
+                            </div>
+                            <div class="d-flex align-items-center flex-column" id="charts-wrapper">
+                                <div id="categories_div"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 20px;" class="p-2 d-flex justify-content-between">
+                    <h6>RECENT COSTUMERS</h6>
+                    <span>
+                        <svg id="cog-icon" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="table-responsive row p-2 m-0" id="card-wrapper">
+                    <table class="table table-striped">
+                        <thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-dark">Jerry Mattedi</td>
+                                <td>18 aug 2018<br />Joined</td>
+                                <td>251-661-3252<br />Phone Number</td>
+                                <td>New York<br />Location</td>
+                                <td style=" text-align: end;">
+                                    <button style="background-color: #ccc;">
+                                        Options
+                                    </button>
+                                    <button style="background-color: #337ab7;" class="text-light">
+                                        Details
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-dark">Jerry Mattedi</td>
+                                <td>18 aug 2018<br />Joined</td>
+                                <td>251-661-3252<br />Phone Number</td>
+                                <td>New York<br />Location</td>
+                                <td style=" text-align: end;">
+                                    <button style="background-color: #ccc;">
+                                        Options
+                                    </button>
+                                    <button style="background-color: #337ab7;" class="text-light">
+                                        Details
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-dark">Jerry Mattedi</td>
+                                <td>18 aug 2018<br />Joined</td>
+                                <td>251-661-3252<br />Phone Number</td>
+                                <td>New York<br />Location</td>
+                                <td style=" text-align: end;">
+                                    <button style="background-color: #ccc;">
+                                        Options
+                                    </button>
+                                    <button style="background-color: #337ab7;" class="text-light">
+                                        Details
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-dark">Jerry Mattedi</td>
+                                <td>18 aug 2018<br />Joined</td>
+                                <td>251-661-3252<br />Phone Number</td>
+                                <td>New York<br />Location</td>
+                                <td style=" text-align: end;">
+                                    <button style="background-color: #ccc;">
+                                        Options
+                                    </button>
+                                    <button style="background-color: #337ab7;" class="text-light">
+                                        Details
+                                    </button>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="text-dark">Jerry Mattedi</td>
+                                <td>18 aug 2018<br />Joined</td>
+                                <td>251-661-3252<br />Phone Number</td>
+                                <td>New York<br />Location</td>
+                                <td style=" text-align: end;">
+                                    <button style="background-color: #ccc;">
+                                        Options
+                                    </button>
+                                    <button style="background-color: #337ab7;" class="text-light">
+                                        Details
+                                    </button>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+            </main>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <div id="themeModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Dark Theme available!</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    Click on the 
+                    <span>
+                        <svg onclick="dark()" class="col-1 text-primary" id="landscape-icon" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z" />
+                        </svg>
+                    </span>
+                    to toggle between themes
+                </div>
+                <div class="modal-footer">
+                    <span data-dismiss="modal" id="dontShowMessage" style="cursor:pointer; text-decoration: none; color: var(--secondary);">Don't show this message again</span>
+                    <button type="button" data-dismiss="modal" class="btn btn-primary">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="settingsModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Account Settings</h5>
+                
+                </button>
+              </div>
+              <div class="modal-body">
+                Settings here
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div id="settingsGeneral" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Settings</h5>
+                
+                </button>
+              </div>
+              <div class="modal-body">
+                Settings here
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- MODALS END -->
+    
+    <footer class="border-top p-2 px-4">
+        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M10.08,10.86C10.13,10.53 10.24,10.24 10.38,10C10.5,9.74 10.72,9.53 10.97,9.37C11.21,9.22 11.5,9.15 11.88,9.14C12.11,9.15 12.32,9.19 12.5,9.27C12.71,9.36 12.89,9.5 13.03,9.63C13.17,9.78 13.28,9.96 13.37,10.16C13.46,10.36 13.5,10.58 13.5,10.8H15.3C15.28,10.33 15.19,9.9 15,9.5C14.85,9.12 14.62,8.78 14.32,8.5C14,8.22 13.66,8 13.24,7.84C12.82,7.68 12.36,7.61 11.85,7.61C11.2,7.61 10.63,7.72 10.15,7.95C9.67,8.18 9.27,8.5 8.95,8.87C8.63,9.26 8.39,9.71 8.24,10.23C8.09,10.75 8,11.29 8,11.87V12.14C8,12.72 8.08,13.26 8.23,13.78C8.38,14.3 8.62,14.75 8.94,15.13C9.26,15.5 9.66,15.82 10.14,16.04C10.62,16.26 11.19,16.38 11.84,16.38C12.31,16.38 12.75,16.3 13.16,16.15C13.57,16 13.93,15.79 14.24,15.5C14.55,15.25 14.8,14.94 15,14.58C15.16,14.22 15.27,13.84 15.28,13.43H13.5C13.5,13.64 13.43,13.83 13.34,14C13.25,14.19 13.13,14.34 13,14.47C12.83,14.6 12.66,14.7 12.46,14.77C12.27,14.84 12.07,14.86 11.86,14.87C11.5,14.86 11.2,14.79 10.97,14.64C10.72,14.5 10.5,14.27 10.38,14C10.24,13.77 10.13,13.47 10.08,13.14C10.03,12.81 10,12.47 10,12.14V11.87C10,11.5 10.03,11.19 10.08,10.86M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20Z" />
+        </svg>
+        Your Company Details
+    </footer>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
