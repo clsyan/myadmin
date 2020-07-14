@@ -63,7 +63,8 @@ header{
 #toggler-icon{
     cursor: pointer;
     padding: 0px 8px; 
-    height: 83px;
+    height: 84px;
+    background-color: #337ab7;
 }
 
 h4{
@@ -79,6 +80,7 @@ h4{
     padding-bottom: 10px;
     height: 70px;
     cursor: pointer;
+    color: #337ab7;
 }
 #user-utils #text-wrapper h6{
     text-align: right;
@@ -141,7 +143,6 @@ h4{
     height: 320px;
 }
 #categories_div{
-    width: 100%; 
     height: 325px ;
 }
 
@@ -187,8 +188,6 @@ footer{
     background-color: rgb(236, 236, 236); 
     cursor: pointer;
 }
-
-
 button{
     border: none;
     width: 6em;
@@ -202,6 +201,6 @@ button{
         font-size: .8rem;
     }
     header{
-        height: 85px !important;
+        height: 81px !important;
     }
 }
